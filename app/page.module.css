@@ -1,0 +1,68 @@
+
+/* FOOTER dejar aqui hasta saber como poner en components*/
+/* TODO: hacer responsive */
+/* Estilos generales del footer */
+.footer {
+  background-color: lightcoral;
+  color: #fff;
+  padding: 70px;
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerSection {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.footer-section h3 {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-section ul li a:hover{
+  color: darkcyan;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-section.logo img {
+  width: px;
+}
+
+.footer-divider {
+  border-left: 1px solid #fff;
+  margin: 0 20px;
+}
+.social-icons a {
+  margin: 0px 10px;
+  color: #333;
+  text-decoration: none;
+}
+#whatsappIcon:hover{
+  color: #26b050;
+}
+#facebookIcon:hover{
+  color: #007bff;  
+}
+.social-icons i {
+  font-size: 24px;
+}
