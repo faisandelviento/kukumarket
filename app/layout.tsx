@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import '@/app/ui/global.css';
 import Footer from "./ui/footer";
 import NavBar from "./ui/navbar";
 import { ThemeProvider } from 'styled-components';
