@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import Footer from "./ui/footer";
 import NavBar from "./ui/navbar";
+import { ThemeProvider } from 'styled-components';
+//TODO: BUSCAR FONT 
+//import { lusitana } from '@/app/ui/fonts';
 
 export const metadata: Metadata = {
   title: "KukuMarket",
@@ -15,7 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      {/* className={`${lusitana.className} antialiased`} */}
+        <body>
         <NavBar/>
         {children}
         <Footer/>
