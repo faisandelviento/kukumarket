@@ -93,9 +93,9 @@ export default function Footer() {
       <FooterSection>
         <h3>LINKS</h3>
         <ul>
-          <li><FooterLink href="/">Enlace 1</FooterLink ></li>
-          <li><FooterLink href="/">Enlace 2</FooterLink ></li>
-          <li><FooterLink href="/">Enlace 3</FooterLink ></li>
+          <li><FooterLink href="/">Productos</FooterLink ></li>
+          <li><FooterLink href="/">Servicios</FooterLink ></li>
+          <li><FooterLink href="/">Contacto</FooterLink ></li>
         </ul>
       </FooterSection>
       <FooterDivider>
