@@ -7,12 +7,23 @@ import { StyledImage, RelativeCont } from "./generalComponents";
 const TextContainer = styled.div`
     position: absolute;
     color: black; 
-    top: 50%;
-    left: 20px;
+    top: 40%;
+    left: 5%;
     transform: translate(0,-55%);
     z-index: 1;
-
 `;
+const StyledButton = styled.button`
+background-color: transparent;
+border: 1px solid black;
+border-radius: 32px;
+padding: 8px 15px;
+transition: background-color 0.4s ease, color 0.3s ease;
+
+&:hover{
+    background-color: black;
+    color: white;
+}
+`
 
 export default function Slider(){
     return(<RelativeCont>
@@ -24,9 +35,9 @@ export default function Slider(){
         alt="reloj rojo"
         />
         <TextContainer>
-            <h1>TITULO</h1>
-            <p>texto texto texto</p>
-            <button>CLick Me</button>
+            <h1>TITULO ITEM</h1>
+            <p>texto texto texto texto</p>
+            <StyledButton>Ver Mas</StyledButton>
         </TextContainer>
         <div className="contBotones">
             <span className="dot"/>
