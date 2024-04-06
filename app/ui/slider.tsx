@@ -3,6 +3,7 @@ import Image from "next/image";
 import styled from "styled-components";
 import { StyledImage, RelativeCont } from "./generalComponents";
 
+//TODO: hacer botones para los controles del slider
 // Estilo del texto que estará encima de la imagen
 const TextContainer = styled.div`
     position: absolute;
