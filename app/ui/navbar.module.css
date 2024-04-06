@@ -12,16 +12,11 @@
 .links{
     flex: 1;
 }
-.menu-toggle {
-    display: none;
-}
+
 
 @media screen and (max-width:1000px){
     .links{
         display: none;
-    }
-    .menu-toggle {
-        display: block;
     }
     .logo {
         text-align: start;

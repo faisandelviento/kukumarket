@@ -2,12 +2,14 @@
 import styles from "../page.module.css";
 import styled from 'styled-components'
 import Link from "next/link";
+import { theme } from './theme';
+
 
 // TODO: cambiar los links a links normales para que la pagina recarge
 
 const FooterSpace = styled.div`
-background-color: lightcoral;
-color: #fff;
+background-color: ${theme.claro.background};
+color: ${theme.claro.text};
 padding: 70px;
 `
 const FooterContainer = styled.div`
@@ -36,7 +38,7 @@ h3 {
 
 
   ul li a:hover {
-    color: darkcyan;
+    color: ${theme.claro.accent};
     text-decoration: none;
     cursor: pointer;
   }
@@ -46,19 +48,19 @@ h3 {
   }
 `
 const FooterDivider = styled.div`
-  border-left: 1px solid #fff;
+  border-left: 1px solid ${theme.claro.subtext};
   margin: 0 20px;
 `;
 const FooterLink = styled(Link)`
     margin: 0px 10px 0px 0px;
-    color: #fff;
+    color: ${theme.claro.text};
     text-decoration: none;
-  }`
+  `;
 
 
 const SocialIcons = styled.div`
   svg {
-    fill: #333;
+    fill: ${theme.claro.subtext};
   }
 
   #whatsappIcon:hover svg {

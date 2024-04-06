@@ -3,22 +3,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 import styled , { css }from 'styled-components';
 import styles from '@/app/ui/navbar.module.css'
+import { theme } from './theme';
 
-// mas facil estilar con css que con styled components...
 //TODO: hacer funcionar el boton de los link con clsx 
-//TODO: acabar de pasar los estilos a global o style components 
-// @media screen and (max-width:1000px){
-//     .links{
-//         display: none;
+// .menu-toggle {
+//     display: block;
 //     }
-//     .menu-toggle {
-//         display: block;
-//     }
-//     .logo {
-//         text-align: start;
-//     } 
-// }
+// mas facil estilar con css que con styled components...
 
+
+//Styled-componentes
 const NavBarSpace = styled.div`
 display: flex;
 justify-content: center;
@@ -26,26 +20,26 @@ justify-content: center;
 
 const Nav = styled.div`
 width: 1250px;
-background-color: #151D20;
-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.785);
+background-color: ${theme.claro.background};
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.45);
 border-radius: 0px 0px 15px 15px; 
 display: flex;
-padding: 10px 25px;
+padding: 5px 25px;
 align-items: center;
 
 @media screen and (max-width: 1260px) {
-    padding: 10px 20px;
+    padding: 5px 20px;
     width: 100vw;
     border-radius: 0px;
   }
 `
 const LinkNavbar = styled(Link)<{ $left?: boolean; }>`
-color: #fff;
+color: ${theme.claro.text};
 text-decoration: none;
 margin-right: 15px;
 
 &:hover {
-    color: lightcoral;
+    color: ${theme.claro.accent};
   }
 
   ${props => props.$left && css`
@@ -54,20 +48,24 @@ margin-right: 15px;
 `
 
 const MenuButton = styled.button`
+display: none;
 font-size:large;
-color: antiquewhite;
-background-color: crimson;
+background-color: transparent;
+color: ${theme.claro.text};
 border: 0px solid transparent ;
 border-radius: 50%;
 &:hover{
-    color: aqua;
+    color: ${theme.claro.accent};
     }
- `
 
+@media screen and (max-width:1000px){
+    display: block;
+}
+ `
 
 export default function NavBar() {
     const toggleNavbar = () => {
-        console.log("click en boton de navbar")
+
       };
 
     return(
