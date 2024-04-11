@@ -4,19 +4,21 @@ import styled from "styled-components";
 
 //STYLES GENERAL
 
-//padding de arriba y abajo pagina
+//TODO: PARA HACERLO RESPONSIVE TAL VEZ GRID ES MAS ADEQUADO
 
 const ContainerProductos = styled.div`
 display: flex;
 flex-direction: row;
 justify-content: space-between;
 gap: 3%;
+max-width: 1000px;
 `
 const Cabecera = styled.div`
 padding: 60px 0px 30px 0;
 display: flex;
 flex-direction: row;
 align-items: center;
+max-width: 1000px;
 `
 //TO DO: estilar boton
 const BottonMas = styled.button`
@@ -32,27 +34,45 @@ padding: 10px 30px;
 }
 `
 const ContainerItem = styled.div`
-
+background-color: grey;
 `
 const ResponsiveImage = styled(Image)`
 border-radius:4px;
 `
 
-function Producto (){
+interface ProductoProps {
+    nombre: string;
+    precio: number;
+  }
+
+function Producto (props: ProductoProps){
+    const { nombre, precio  } = props;
     return (
-        <ContainerItem>
-            <ResponsiveImage 
-            src="/productos/producto1.png"
-            width={250}
-            height={200}
-            alt=""/>
-            <h5>Nombre del Producto</h5>
-            <p>precio</p>
-        </ContainerItem>
+        <div>
+            <div>
+                {/* ESTILAR PARA QUE SEA ABSOLUTE Y RELATIVE Y AÑADIR ICONO */}
+                <ResponsiveImage 
+                src="/productos/producto1.png"
+                width={200}
+                height={200}
+                alt={`Imagen de ${nombre}`}/>
+            </div>
+            <h5>{nombre}</h5>
+            <p>{precio} €</p>
+        </div>
     )
 }
 
+//datos inventad
+const productos = [
+    { id: "LP product1", nombre: 'Producto 1', precio:30 },
+    { id: "LP product2", nombre: 'Producto 2', precio:66.8},
+    { id: "LP product3", nombre: 'Producto 3',precio:80 },
+    { id: "LP product4", nombre: 'Producto 4', precio:30 }
+  ];
+
 export function SellingProducts(){
+    
     return(
         <>
             <Cabecera>
@@ -60,10 +80,12 @@ export function SellingProducts(){
                 <BottonMas>Ver Todo</BottonMas>
             </Cabecera>
             <ContainerProductos>
-                <Producto/>
-                <Producto/>
-                <Producto/>
-                <Producto/>
+            {productos.map(producto => (
+          <Producto 
+          key={producto.id} 
+          nombre={producto.nombre} 
+          precio={producto.precio} />
+        ))}
             </ContainerProductos>
         </>
     )
