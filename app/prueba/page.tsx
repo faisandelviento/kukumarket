@@ -1,6 +1,8 @@
+import Header2 from "../ui/prueba/header2";
 
 export default function Home() {
   return (
-    <div>PAGINA DE PRUEBA</div>
+    <div><Header2/>
+    PAGINA DE PRUEBA</div>
   );
 }

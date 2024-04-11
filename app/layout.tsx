@@ -21,9 +21,7 @@ export default function RootLayout({
       {/* className={`${lusitana.className} antialiased`} */}
         <body>
             <NavBar/>
-            <div className="page-cont">
               {children}
-            </div>
             <Footer/>
       </body>
     </html>
