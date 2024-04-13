@@ -24,13 +24,13 @@ max-width: 1000px;
 const BottonMas = styled.button`
 margin-left: auto;
 background-color: transparent;
-border: solid 1px #a5dfdf;
+border: solid 1px #BBD279;
 border-radius: 4px;
 height: 100%;
 padding: 10px 30px;
 
 &:hover{
-    background-color: #a5dfdf;
+    background-color: #BBD279;
 }
 `
 const ContainerItem = styled.div`
@@ -38,6 +38,12 @@ background-color: grey;
 `
 const ResponsiveImage = styled(Image)`
 border-radius:4px;
+`
+const TituloProducto = styled.h4`
+margin:16px 0px 0px 8px;
+`
+const PrecioProducto = styled.p`
+margin: 8px 0px 0px 8px;
 `
 
 interface ProductoProps {
@@ -49,16 +55,14 @@ function Producto (props: ProductoProps){
     const { nombre, precio  } = props;
     return (
         <div>
-            <div>
-                {/* ESTILAR PARA QUE SEA ABSOLUTE Y RELATIVE Y AÑADIR ICONO */}
-                <ResponsiveImage 
-                src="/productos/producto1.png"
-                width={200}
-                height={200}
-                alt={`Imagen de ${nombre}`}/>
-            </div>
-            <h5>{nombre}</h5>
-            <p>{precio} €</p>
+            {/* ESTILAR PARA QUE SEA ABSOLUTE Y RELATIVE Y AÑADIR ICONO */}
+            <ResponsiveImage 
+            src="/productos/producto1.png"
+            width={200}
+            height={200}
+            alt={`Imagen de ${nombre}`}/>
+            <TituloProducto>{nombre}</TituloProducto>
+            <PrecioProducto>{precio} €</PrecioProducto>
         </div>
     )
 }

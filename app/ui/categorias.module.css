@@ -13,11 +13,14 @@
     border-radius: 4px;
     background-color: transparent;
     padding: 20px 0px 5px 0;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
 }
 .categoria:hover{
-    background-color: #a5dfdf;
+    background-color: #BBD279;
     transform: scale(1.05); 
+    cursor: pointer;
+    /* ns sobre boxxhadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nombreCategoria{

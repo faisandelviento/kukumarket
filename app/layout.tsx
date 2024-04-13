@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import '@/app/ui/global.css';
 import Footer from "./ui/footer";
 import NavBar from "./ui/navbar";
-import { ThemeProvider } from 'styled-components';
+import { inter } from "./ui/fonts";
+
 //TODO: BUSCAR FONT 
+
 //import { lusitana } from '@/app/ui/fonts';
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/* className={`${lusitana.className} antialiased`} */}
-        <body>
+        <body className={`${inter.className} antialiased`}>
             <NavBar/>
               {children}
             <Footer/>

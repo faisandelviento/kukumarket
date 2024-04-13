@@ -13,7 +13,7 @@ function CategoriaItem(props:{nombre:string}){
                 src={`/iconos/${props.nombre}.svg`}
                 width={60}
                 height={60}
-                alt={`imagen ${props.nombre}`}            
+                alt={`imagen ${props.nombre}`}
                 />
             <p className={style.nombreCategoria}>{props.nombre}</p>
         </div>

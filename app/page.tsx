@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Header from "./ui/header";
 import { Categorias } from "./ui/categorias";
 import { SellingProducts } from "./ui/products";
